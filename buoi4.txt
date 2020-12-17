@@ -1,0 +1,176 @@
+/* CSS Document */
+body {
+	padding: 0px;
+	margin: 0px;
+}
+* {
+	box-sizing: border-box;
+}
+.khung {
+	width: 1200px;
+	margin: auto;
+}
+.khung .banner {
+	width: 100%;
+	height: 200px;
+	background-color: #05CC85;
+}
+.khung .menu {
+	position:fixed; /*menu chạy theo thanh cuộn ở vị trí top-left = 0px*/
+	bottom:0px;
+	left:0px;
+	width: 100%;
+	height: 50px;
+	background-color: #ddd;
+}
+.khung .left
+,.khung .right
+,.khung .content{
+float:left;	
+	}
+.khung .left {
+	width: 250px;
+	min-height: 350px;
+	background-color: green;
+}
+.khung .content {
+	width: 700px;
+	min-height: 2000px;
+	background-color: hsla(50,100%,46%,1.00);
+}
+.khung .right {
+	width: 250px;
+	min-height: 350px;
+	background-color: hsla(283,91%,46%,1.00);
+}
+.khung .footer{
+	clear:both;
+	height:200px;
+	width:100%;
+	background-color:hsla(359,26%,34%,1.00);	
+}
+.mainmenu ul{
+	list-style-type: none; /*bỏ dấu chấm tròn đi*/
+	margin: 0px; /*sát lề*/
+	padding: 0px;
+	display:flex; /*cho hiển thị trên cùng 1 dòng, */
+	flex-wrap:no-wrap;
+	width:100%;
+	
+} 
+.mainmenu ul li {
+	width:20%;}
+.mainmenu ul li a{
+	width:25%;
+	background-color:#B4D2C;
+	text-align:center;
+	height:50px;
+	padding: 10px;
+	line-height: 30px; /* height = 50, padding = 10 (trên dưới) => line-height = 30*/
+	text-decoration:none;/*bỏ gạch chân */
+	color:#096AED;
+	}
+.mainmenu ul li a:hover{
+	color:#aaa;
+	background-color:#F3BF0D;
+	
+	}
+.mainmenu ul li{
+	position:relative; }
+	
+.mainmenu ul li:hover ul { /*hiển thị ul lên khi hover*/
+		display:block;}
+		
+.mainmenu ul ul { /*ẩn thằng ul bên trng lại*/
+	display:none;
+	width:250px;
+	position:absolute;
+	bottom:100%;
+	left:0px;
+}
+.mainmenu ul ul li{
+	width:100%;
+}
+.mainmenu ul ul li a{
+	text-align:left;
+}
+.page{
+	height:500px;
+	background-color:#23D158
+}
+body {
+	-webkit-transition: all 5s ease-in 0s;
+	-o-transition: all 5s ease-in 0s;
+	transition: all 5s ease-in 0s;
+}
+
+
+/****************************************/
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title> 
+
+<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+</head>
+
+<body>
+
+ <div class="khung" >
+ 	<div class="banner" >banner</div>
+    <div class="menu">
+    <nav class="mainmenu">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#gioithieu">Giới thiệu</a></li>
+        <li><a href="#sanpahm">Sản phẩm</a>
+        	<ul>
+        	<li><a href="#">Sản phẩm 1</a></li>
+        	<li><a href="#">Sản phẩm 2</a></li>
+        	<li><a href="#">Sản phẩm 3</a></li>
+        	<li><a href="#">Sản phẩm 4</a></li>
+        	</ul>
+        </li>
+        <li><a href="#tintuc">Tin tức</a>
+        	<ul>
+        	<li><a href="#">Sản phẩm 1</a></li>
+        	<li><a href="#">Sản phẩm 2</a></li>
+        	<li><a href="#">Sản phẩm 3</a></li>
+        	<li><a href="#">Sản phẩm 4</a></li>
+        	</ul>
+        </li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Tin tức</a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="left">
+    <nav class="leftmenu">
+      <ul>
+        <li><a href="#"></a> Danh muc </li>
+        <li><a href=""></a>quần tây</li>
+        <li>quần jean</li>
+        <li>quần đùi</li>
+        <li>áo sơ mi</li>
+      </ul>
+      </nav>
+    </div>
+    <div class="content">
+   	  <div class="page" id="gioithieu"> gioi thieu</div>
+        <div class="page" id="tintuc"> tin tuc</div>
+        <div class="page" id="sanpham"> san pham</div> /* dấu # là khi click chuột sẽ chạy đến khung đó*/
+   </div>
+    <div class="right">right</div>
+    <div class="footer">footer</div>
+ </div>
+ 
+ 
+ 
+</body>
+</html>
