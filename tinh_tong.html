@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Javascrip</title>
+</head>
+
+<body>
+
+<table width="300" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td>
+      	<label>Số A</label>
+        <td><input id="soA"></td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <label>Số B</label>
+      <td><input id="soB"></td>
+      </td>
+    </tr>
+    <tr>
+      <td><button onClick="Tinhtong()" >Tinh</button></td>
+      <td><button onClick="TinhPTB1()" >Tinh pt bậc 1</button></td>
+    </tr>
+    <tr>
+	   <td><label>Kết quả</label></td>
+      <td><input id="ketqua"></td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+	
+	function Tinhtong() 
+	{
+	var	soA = document.getElementById("soA");
+	var soB = document.getElementById("soB");
+	var ketqua = document.getElementById("ketqua");
+	console.log(soA.value);
+	console.log(soB.value);
+	
+	ketqua.value = parseFloat (soA.value) + parseFloat (soB.value); <!--để tính được chúng ta phải ép kiểu-->
+	
+	
+	}
+	
+		var TinhPTB1 = function ()
+	{
+		var	soA = document.getElementById("soA");
+		var soB = document.getElementById("soB");
+		var ketqua = document.getElementById("ketqua");
+		var a = parseFloat(soA.value);
+		var b = parseFloat(soB.value);
+		
+			if(a==0)
+				if(b==0)
+					ketqua.value = "PT VSN";
+				else
+					ketqua.value = " PT VN";
+			else
+				ketqua.value = -b/a;
+		
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Javascrip</title>
+</head>
+
+<body>
+<button onClick="alert('xin chao')" >Click me !</button>
+<!-- chỉ có nút ok -->
+<button onClick="confirm('xin chao')" >Fuck you !</button>
+<!--có nút ok => trả về giá trị true & cancel => ngươc lại--> 
+<a onClick="return confirm('Bạn có đến google >')" href="https://google.com.vn"> Google </a>
+<input onBlur="alert('123')" >
+<input onFocus="alert('145')" >
+<select onChange="alert(this.value)">
+  <option value="01">Chọn 1</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+</select>
+<input onChange="alert(this.value)" >
+<input type="text" onSelect="alert(this.value)"> <!--khi bôi đen nội dung-->
+
+<script type="text/jscript"> <!--sẽ làm việc với javascript ở đây-->
+
+	var a = 1;
+	var b = 2;
+	var tam = a;
+	a = b;
+	b = tam;
+	console .log(a);
+	console .log(b);
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Javascrip</title>
+<style>
+.khung {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-color:#F4F4F4;
+	opacity:1.2;
+}
+.noidung{
+	width:500px;
+	height:500px;
+	margin:auto;
+	text-align:center;
+	margin-top:200px;
+	position:relative;
+}
+.btnthoat{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.noidung img{
+	width:100%;
+	height:auto;
+	margin:auto;
+}
+
+</style>
+</head>
+
+<body>
+<button onClick="doimau()" >Đổi màu</button>
+<div class="khung" id="khung">Khung
+  <div class="noidung"> <!--che đằng sau, không nhấn nút được-->
+    <button class="btnthoat" onClick="ankhung()" >Thoát</button>
+    <img src="hinh/1.jfif" width="259" height="194" alt=""> </div>
+</div>
+<button onClick="ankhung()" >Ẩn khung</button>
+<button onClick="hienkhung()" >Hiện khung</button>
+</body>
+<script type="text/javascript">
+	var ankhung = function ()
+	{
+		document.getElementById("khung").style.display = "none";
+	}
+	
+	var hienkhung = function()
+	{
+		document.getElementById("khung").style.display = "block";
+	}
+	
+	var doimau = function ()
+	{
+		document.getElementById("khung").style.backgroundColor = "orange" ;
+				<!--var khung = document.getElementsByClassName("khung") [0] .style;-->
+		debugger;
+		document.getElementById("khung").style.backgroundColor="green";
+	}
+</script>
+</html>
